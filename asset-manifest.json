@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hn6039940/.github.io/Cat-Rodex/static/css/main.490155d5.css",
+    "main.js": "/hn6039940/.github.io/Cat-Rodex/static/js/main.3192cd67.js",
+    "static/js/787.f6b2eaaf.chunk.js": "/hn6039940/.github.io/Cat-Rodex/static/js/787.f6b2eaaf.chunk.js",
+    "index.html": "/hn6039940/.github.io/Cat-Rodex/index.html",
+    "main.490155d5.css.map": "/hn6039940/.github.io/Cat-Rodex/static/css/main.490155d5.css.map",
+    "main.3192cd67.js.map": "/hn6039940/.github.io/Cat-Rodex/static/js/main.3192cd67.js.map",
+    "787.f6b2eaaf.chunk.js.map": "/hn6039940/.github.io/Cat-Rodex/static/js/787.f6b2eaaf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.490155d5.css",
+    "static/js/main.3192cd67.js"
+  ]
+}
