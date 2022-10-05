@@ -11,13 +11,18 @@ const App = () => {
   const [filterProfiles, setFilterProfiles] = useState(profiles);
   const [title, setTitle] = useState(pageTitle);
 
-  const callfnc = async function () {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
-    const data = await res.json();
-    setProfiles(data);
-  };
+  // const callfnc = async function () {
+  //   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  //   const data = await res.json();
+  //   setProfiles(data);
+  // };
 
-  useEffect(() => callfnc, []);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => setProfiles(data));
+  });
+
   useEffect(() => {
     const searchArr = profiles.filter((profile) => {
       const lowerName = profile.name.toLowerCase().split(" ").join("");
