@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/.github.io/Cat-Rodex/static/css/main.490155d5.css",
-    "main.js": "/.github.io/Cat-Rodex/static/js/main.0f7a0be3.js",
-    "static/js/787.f6b2eaaf.chunk.js": "/.github.io/Cat-Rodex/static/js/787.f6b2eaaf.chunk.js",
-    "index.html": "/.github.io/Cat-Rodex/index.html",
-    "main.490155d5.css.map": "/.github.io/Cat-Rodex/static/css/main.490155d5.css.map",
-    "main.0f7a0be3.js.map": "/.github.io/Cat-Rodex/static/js/main.0f7a0be3.js.map",
-    "787.f6b2eaaf.chunk.js.map": "/.github.io/Cat-Rodex/static/js/787.f6b2eaaf.chunk.js.map"
+    "main.css": "/Cat-Rodex/static/css/main.490155d5.css",
+    "main.js": "/Cat-Rodex/static/js/main.34886ebf.js",
+    "static/js/787.f6b2eaaf.chunk.js": "/Cat-Rodex/static/js/787.f6b2eaaf.chunk.js",
+    "index.html": "/Cat-Rodex/index.html",
+    "main.490155d5.css.map": "/Cat-Rodex/static/css/main.490155d5.css.map",
+    "main.34886ebf.js.map": "/Cat-Rodex/static/js/main.34886ebf.js.map",
+    "787.f6b2eaaf.chunk.js.map": "/Cat-Rodex/static/js/787.f6b2eaaf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.490155d5.css",
-    "static/js/main.0f7a0be3.js"
+    "static/js/main.34886ebf.js"
   ]
 }
