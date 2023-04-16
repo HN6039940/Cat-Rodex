@@ -1,13 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 import CardList from "./compornent/card-list/card-list.component";
 import SearchBox from "./compornent/search-box/search-box.component";
+import { getData } from "./utils/data.utils";
 import "./App.css";
 
+export type MonsterProfile = {
+  id: string;
+  name: string;
+  email: string;
+  website: string;
+};
 const App = () => {
-  const pageTitle = "Cat Rolodex";
+  const pageTitle: string = "Cat Rolodex";
 
   const [searchfield, setSerchfiled] = useState("");
-  const [profiles, setProfiles] = useState([]);
+  const [profiles, setProfiles] = useState<MonsterProfile[] | never[]>([]);
   const [filterProfiles, setFilterProfiles] = useState(profiles);
   const [title, setTitle] = useState(pageTitle);
 
@@ -18,14 +25,21 @@ const App = () => {
   // };
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((data) => setProfiles(data));
-  });
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    //   .then((res) => res.json())
+    //   .then((data) => setProfiles(data));
+    const fetchData = async (): Promise<void> => {
+      const data = await getData<MonsterProfile[]>(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      setProfiles(data);
+    };
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const searchArr = profiles.filter((profile) => {
-      const lowerName = profile.name.toLowerCase().split(" ").join("");
+      const lowerName: string = profile.name.toLowerCase().split(" ").join("");
       return (
         profile.name.toLowerCase().includes(searchfield) ||
         lowerName.includes(searchfield)
@@ -34,12 +48,12 @@ const App = () => {
     setFilterProfiles(searchArr);
   }, [profiles, searchfield]);
 
-  const onsearchChange = (e) => {
+  const onsearchChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const searchFieldString = e.target.value.toLowerCase();
     setSerchfiled(searchFieldString);
   };
 
-  const changeTitle = (e) => {
+  const changeTitle = (e: ChangeEvent<HTMLInputElement>) => {
     const titleString = e.target.value;
     if (!titleString) return setTitle(pageTitle);
     setTitle(titleString);

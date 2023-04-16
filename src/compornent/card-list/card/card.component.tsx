@@ -1,7 +1,10 @@
 import "./card.style.css";
-
-const Card = (props) => {
-  const { id, name, email, website } = props.profile;
+import { MonsterProfile } from "../../../App";
+type CardProps = {
+  profile: MonsterProfile;
+};
+const Card = ({ profile }: CardProps) => {
+  const { id, name, email, website } = profile;
 
   return (
     <div className="card-container">

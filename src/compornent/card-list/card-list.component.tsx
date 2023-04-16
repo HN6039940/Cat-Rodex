@@ -1,8 +1,12 @@
 import Card from "./card/card.component";
 import "./card-list.style.css";
+import { MonsterProfile } from "../../App";
 
-const CardList = (props) => {
-  const { searcharr } = props;
+type CardListProps = {
+  searcharr: MonsterProfile[];
+};
+
+const CardList = ({ searcharr }: CardListProps) => {
   return (
     <div className="card-wrap">
       <div className="grid">
